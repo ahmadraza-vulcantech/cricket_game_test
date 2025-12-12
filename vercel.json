@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    { "source": "/Build/:file*", "destination": "/Build/:file*" }
+  ],
+  "headers": [
+    {
+      "source": "/Build/(.*).br",
+      "headers": [
+        { "key": "Content-Encoding", "value": "br" },
+        { "key": "Content-Type", "value": "application/javascript" }
+      ]
+    }
+  ]
+}
